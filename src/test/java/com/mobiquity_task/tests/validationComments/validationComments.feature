@@ -19,7 +19,7 @@ Feature: Count Questions in Worksheet
 
     Examples:
       | User Name |
-      | Esraa  |
+      | Esraa     |
 
 
   Scenario Outline: Search for  existing user with no posts.
@@ -27,7 +27,7 @@ Feature: Count Questions in Worksheet
     Then  no posts should be returned
     Examples:
       | User ID |
-      | 800  |
+      | 800     |
 
 
   Scenario Outline: Check if the user search with invalid postId
@@ -36,7 +36,7 @@ Feature: Count Questions in Worksheet
 
     Examples:
       | Post ID |
-      | 98898    |
+      | 98898   |
 
 
 

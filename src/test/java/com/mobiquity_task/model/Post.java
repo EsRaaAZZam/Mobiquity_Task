@@ -1,6 +1,5 @@
 package com.mobiquity_task.model;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
 import lombok.*;
 
 @Data

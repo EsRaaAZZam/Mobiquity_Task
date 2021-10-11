@@ -1,10 +1,8 @@
 package com.mobiquity_task.services;
 
-import com.mobiquity_task.model.Comment;
 import com.mobiquity_task.model.Post;
 import com.mobiquity_task.tests.BaseTest;
 import com.mobiquity_task.utils.RestAssuredUtil;
-import io.restassured.path.json.JsonPath;
 import org.testng.Assert;
 
 import java.io.IOException;
@@ -13,18 +11,17 @@ import java.util.Arrays;
 import java.util.List;
 
 import static com.mobiquity_task.utils.RestAssuredUtil.fetchFromAPI;
-import static com.mobiquity_task.utils.RestAssuredUtil.getContent;
 
 
-public class APIPostService extends BaseTest implements IPostService{
+public class APIPostService extends BaseTest implements IPostService {
     @Override
-    public  void searchForPostsForUser(String userId) throws IOException {
-         resPost = fetchFromAPI("userId" , userId , "/posts");
+    public void searchForPostsForUser(String userId) throws IOException {
+        resPost = fetchFromAPI("userId", userId, "/posts");
         RestAssuredUtil.checkStatusIs200(resPost);
         jp = RestAssuredUtil.getJsonPath(resPost);
 
 
-         // System.out.println(getContent(jp));
+        // System.out.println(getContent(jp));
 
     }
 
@@ -33,11 +30,11 @@ public class APIPostService extends BaseTest implements IPostService{
         List<Post> postsList;
         List<Integer> postsids;
 
-        if (jp.getJsonObject("postId").toString()=="[]") {
+        if (jp.getJsonObject("postId").toString() == "[]") {
             postsids = new ArrayList<>();
 
 
-        }else {
+        } else {
             posts = resPost.as(Post[].class);
             postsList = new ArrayList<>(Arrays.asList(posts));
             postsids = new ArrayList<>();
@@ -54,7 +51,7 @@ public class APIPostService extends BaseTest implements IPostService{
     }
 
     @Override
-    public  void isJsonKeyEmpty() throws IOException {
+    public void isJsonKeyEmpty() throws IOException {
 
         List<Integer> list = fetchAllPostIds();
         Assert.assertEquals(list.size(), 0);

@@ -15,7 +15,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static io.restassured.RestAssured.given;
-import static io.restassured.RestAssured.when;
 
 public final class RestAssuredUtil extends BaseTest {
 
@@ -71,7 +70,6 @@ public final class RestAssuredUtil extends BaseTest {
             Assert.assertTrue(isValidEmailFormatter);
         }
     }
-
 
 
 }

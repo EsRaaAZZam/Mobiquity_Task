@@ -1,9 +1,5 @@
 package com.mobiquity_task.model;
 
-import lombok.Builder;
-import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.*;
 
 @Data

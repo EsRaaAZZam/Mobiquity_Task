@@ -1,13 +1,11 @@
 package com.mobiquity_task.tests.validationComments;
 
 import com.mobiquity_task.model.Comment;
-import com.mobiquity_task.model.Post;
 import com.mobiquity_task.services.*;
 import com.mobiquity_task.tests.BaseTest;
 import com.mobiquity_task.utils.RestAssuredUtil;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.messages.internal.com.google.protobuf.Internal;
 import org.testng.Assert;
 
 import java.io.IOException;
@@ -20,7 +18,8 @@ public class validationCommentsStepdefs extends BaseTest {
     public IUserService userService = new APIUserService();
     public IPostService postService = new APIPostService();
     public ICommentService commentService = new APICommentService();
-    public  List<Comment> list;
+    public List<Comment> list;
+
     @Given("Search for the user with username {string}")
     public void searchForTheUserWithUsername(String arg0) throws IOException {
         userService.searchForUserUsingUsername(arg0);
@@ -54,15 +53,14 @@ public class validationCommentsStepdefs extends BaseTest {
     public void searchForThePostsWithWithInvalid(String arg0) throws IOException {
 
 
-       postService.searchForPostsForUser(arg0);
+        postService.searchForPostsForUser(arg0);
 
     }
 
 
     @Then("no posts should be returned")
     public void noPostsShouldBeReturned() throws IOException {
-    postService.isJsonKeyEmpty();
-
+        postService.isJsonKeyEmpty();
 
 
     }
@@ -75,13 +73,12 @@ public class validationCommentsStepdefs extends BaseTest {
     }
 
 
-
     @Given("user search with invalid {string}")
     public void userSearchWithInvalid(String arg0) throws IOException {
         int postId = Integer.parseInt(arg0);
-        List <Integer> postIdList = new ArrayList<>();
+        List<Integer> postIdList = new ArrayList<>();
         postIdList.add(postId);
-        list=commentService.getComments(postIdList);
+        list = commentService.getComments(postIdList);
 
 
     }
