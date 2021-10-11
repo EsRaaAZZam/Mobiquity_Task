@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class validationCommentsStepdefs extends BaseTest {
+public class ValidationCommentsStepdefs  {
 
 
     public IUserService userService = new APIUserService();
