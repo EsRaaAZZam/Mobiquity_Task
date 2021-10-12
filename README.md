@@ -3,7 +3,7 @@ REST_Assured API Test Framework
 
 # Used Tools and framworks
 (Java
-REST-Assured ,
+REST-Assured
 ,TestNG, 
 Cucumber
 Cucumber html reports,
