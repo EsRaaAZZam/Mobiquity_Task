@@ -2,28 +2,29 @@
 REST_Assured API Test Framework
 
 # Used Tools and framworks
-Java
-REST-Assured 
+(Java
+REST-Assured ,
 ,TestNG, 
 Cucumber
-Cucumber html reports
+Cucumber html reports,
 lombok, 
 CircleCI ,
-Extend Reports
+Extend Reports)
 
-#To Run 
+
+# To Run 
 After Cone the project and Import in inteliji 
  run feature file in the following path ./src/test/java/com/mobiquity_task/tests/validationComments/validationComments.feature 
- #or 
+ # or 
  click Righ on  src/test/java/com/mobiquity_task/tests/validationComments/validationCommentsRunner and run it
- #Or
+ # Or
  run with mvn Test
- #Or
+ # Or
  Run TestNG.cxml
  
 # To generate Reports
  --Run TestNG.xml for extend Report
- #or
+ # or
  you wull find cucumber-html-reports in the following path ./Reports
  
  
